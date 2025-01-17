@@ -4,7 +4,7 @@ V1.1.1-B20200824.0128
 # BUG TYPE
 buffer overflow
 # Abstract
-The TOTOlink A3002R router device contains a buffer overflow vulnerability in its firmware version V1.1.1-B20200824.0128. The vulnerability arises from the improper input validation of the `static_ipv6` parameter in the `formIpv6Setup` interface of `/bin/boa`. A remote attacker could exploit this flaw to execute arbitrary code on the system or cause a denial of service.
+The TOTOlink A3002R router device contains a buffer overflow vulnerability in its firmware version V1.1.1-B20200824.0128. The vulnerability arises from the improper input validation of the `pppoe_dns1` parameter in the `formIpv6Setup` interface of `/bin/boa`. A remote attacker could exploit this flaw to execute arbitrary code on the system or cause a denial of service.
 # Details
 `/squashfs-root/bin/boa`
 ![](https://github.com/SunnyYANGyaya/firmcrosser/blob/main/ToTolink/figures/Snipaste_2025-01-17_14-59-19.png)
