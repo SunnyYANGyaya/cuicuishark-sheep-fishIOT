@@ -3,3 +3,6 @@
 
 上个月更新
 [sezangel/IOT-vul](https://github.com/sezangel/IOT-vul)
+
+六个月前更新
+[s4ndw1ch136/IOT-vuln-reports](https://github.com/s4ndw1ch136/IOT-vuln-reports/tree/main)
