@@ -9,3 +9,7 @@
 
 两年前更新
 [zhuangzhouliandie/iot](https://github.com/zhuangzhouliandie/iot)
+
+
+totolink的RCE
+[totolink\_A3002R\_RCE/README.md at main · MnrikSrins/totolink\_A3002R\_RCE](https://github.com/MnrikSrins/totolink_A3002R_RCE/blob/main/README.md)
