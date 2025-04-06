@@ -20,13 +20,11 @@ At line 45, the function:
 
 A buffer overflow vulnerability exists in the `GetDomainName` function. Specifically, variable `a1` is copied to `a2` using `strcpy` without any filtering or length verification. The function doesn't check whether `a2` has sufficient space to store the copied string. Further analysis confirms that the controllable `NoticeUrl` parameter can trigger this buffer overflow vulnerability. In the `setNoticeCfg` function, `v7` corresponds to `a1` and `v36` corresponds to `a2`. If the string pointed to by `v7` exceeds the size of the `v36` buffer, a buffer overflow can occur, potentially overwriting adjacent memory regions and causing undefined behavior.
 
-<img src="figures/Snipaste_2025-04-06_00-44-55.png" alt="Snipaste_2025-04-06_00-44-55" style="zoom:50%;" />
+![Snipaste_2025-04-06_00-44-55](figures/Snipaste_2025-04-06_00-44-55.png)
 
 Although the `setNoticeCfg` function includes a `Validity_check` function at line 106, disassembly reveals that this check only looks for specific dangerous characters but does not verify string length.
 
-
-
-<img src="figures/Snipaste_2025-04-06_00-24-20.png" alt="Snipaste_2025-04-06_00-24-20" style="zoom: 33%;" />
+![Snipaste_2025-04-06_00-24-20](figures/Snipaste_2025-04-06_00-24-20.png)
 
 The `Validity_check` function details:
 
