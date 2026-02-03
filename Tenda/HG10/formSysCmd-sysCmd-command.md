@@ -1,3 +1,5 @@
+# [CVE-2026-1690](https://www.cve.org/CVERecord?id=CVE-2026-1690)
+
 # TARGET
 
 **Product:** Tenda HG10
