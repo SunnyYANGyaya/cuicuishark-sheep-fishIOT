@@ -37,5 +37,3 @@ This shows that the user-controllable `sysCmd` parameter is directly concatenate
 # POC
 
 ![Snipaste_2026-01-17_21-32-10](formSysCmd-sysCmd-command.assets/Snipaste_2026-01-17_21-32-10.png)
-
-![Snipaste_2026-01-17_21-31-52](formSysCmd-sysCmd-command.assets/Snipaste_2026-01-17_21-31-52.png)

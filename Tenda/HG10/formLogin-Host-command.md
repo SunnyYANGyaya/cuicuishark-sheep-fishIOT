@@ -44,11 +44,5 @@ The `exec_cmd_with_output` function executes the command string stored in `v7`, 
 
 ![Snipaste_2026-01-17_19-47-45](formLogin-Host-command.assets/Snipaste_2026-01-17_19-47-45.png)
 
-Before the attack, it can be observed that the directory named `hahaha` does not exist on the device’s file system.
 
-The malicious request is sent to the target device using the BurpSuite tool.
-
-![Snipaste_2026-01-17_19-49-50](formLogin-Host-command.assets/Snipaste_2026-01-17_19-49-50.png)
-
-After the request is processed, the `hahaha` directory is successfully created on the device. This confirms that the injected command has been executed successfully and demonstrates the existence of the command injection vulnerability.
 
